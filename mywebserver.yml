@@ -1,8 +1,4 @@
 ---
-  - name: i want to install apache2
-    apt:
-      name: apache2
-      state: present
   - name: Update repositories cache and install "foo" package
     ansible.builtin.apt:
     name: foo
