@@ -6,6 +6,9 @@
     apt:
       name: apache2
       state: present
-  - name: i want to install tree
-    state: present
+  - name: Update repositories cache and install "foo" package
+  ansible.builtin.apt:
+    name: foo
+    update_cache: yes
+
 
