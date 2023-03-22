@@ -9,8 +9,8 @@
       state: present
     when: ansible_os_family =="Debian"
 
-- name: i wnat to start apache2
-  service: 
-    name: apache2
-    state: restarted
-  when: ansible_os_family =="Debian"
+  - name: i wnat to start apache2
+    service: 
+      name: apache2
+      state: restarted
+    when: ansible_os_family ==
