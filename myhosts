@@ -2,8 +2,8 @@
 172.31.24.130
 
 [mywebservers]
-172.31.25.149
-172.31.24.158
+172.31.22.193
+172.31.24.130
 
 [mywebservers]
 172.31.25.149
@@ -19,7 +19,13 @@
 
 
 [myubuntuservers]
-172.31.25.149
+172.31.22.193
+
+[mywebservers:vars]
+myvar= value
+mywebpackonubuntu= nginx2222
+mywebpackonredhat= httpd
+
 
 [myRedHatservers]
 172.31.21.43
