@@ -1,8 +1,8 @@
-172.31.22.193
+172.31.30.147
 172.31.24.130
 
 [mywebservers]
-172.31.22.193
+172.31.30.147
 172.31.24.130
 
 [myapplicationservers]
@@ -15,7 +15,7 @@
 
 
 [myubuntuservers]
-172.31.22.193
+172.31.30.147
 
 [mywebservers:vars]
 myvar= value
