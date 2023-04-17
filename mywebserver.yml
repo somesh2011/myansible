@@ -4,11 +4,11 @@
   tasks:
     - name: install webservers
       apt: 
-        name: apache2
+        name: "{{mywebpackonubuntu}}"
         state: present
     - name: i want to start apache2
       service:
-        name: apache2
+        name: "{{mywebpackonubuntu}}"
         state: restarted
 
     - name: install tree
@@ -20,7 +20,7 @@
       yum:
         name: httpd
         state: present
-        when: ansible_os_family =="RedHat" 
+        when: ansible_os_family =="{mywebpackonRedHat}" 
 
     - name: i want to start webserver
       service:
