@@ -15,13 +15,13 @@
         state: restarted
       when: ansible_os_family =="Debian"
     
-    - name: i want to install webserver on RedHat nodes
+    - name: i want to install webservers on RedHat nodes
       yum:
         name: "{{mywebpackonRedHat}}"
         state: present
       when: ansible_os_family =="RedHat" 
 
-    - name: i want to start webserver
+    - name: i want to start webservers
       service:
         name: "{{mywebpackonRedHat}}"
         state: started
