@@ -7,3 +7,8 @@
     apt:
       name: apache2
       state: present
+
+  - name: i want to copy static files in to ansibel nodes side
+    template:
+         src:
+         dest: /var/www/html/index.html    
