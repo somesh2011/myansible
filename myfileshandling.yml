@@ -10,5 +10,5 @@
 
   - name: i want to copy static files in to ansibel nodes side
     template:
-         src:
+         src: mystaticfile.html
          dest: /var/www/html/index.html    
