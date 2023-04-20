@@ -33,7 +33,6 @@
       path: /home/ubuntu/myfolder
       state: directory
 
-  notify: restartwebserver  
   
   handlers:
    - name:
