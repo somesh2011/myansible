@@ -14,7 +14,6 @@
       src: mystaticfile.html
       dest: /var/www/html/index.html   
       
-         
     notify: restartwebserver
 
   - name: i want to copy dynamic file in to ansible nodes side     
@@ -29,11 +28,13 @@
       dest: /home/ubuntu/jenkins.war
       force_basic_auth: yes
     notify: restartwebserver
-      
+
   - name: i want to create a folder 
     file:
       path: /home/ubuntu/myfolder
       state: directory
+
+  notify: restartwebserver  
   
   handlers:
    - name:
