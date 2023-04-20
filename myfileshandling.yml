@@ -7,16 +7,22 @@
     apt:
       name: apache2
       state: present
+    notify: restartwebserver
 
   - name: i want to copy static files in to ansible nodes side
     copy:
          src: mystaticfile.html
-         dest: /var/www/html/index.html    
+         dest: /var/www/html/index.html   
+
+         notify: restartwebserver 
+         
+    notify: restartwebserver
 
   - name: i want to copy dynamic file in to ansible nodes side     
     template:
          src: myindex.j2
-         dest: /var/www/html/index.html  
+         dest: /var/www/html/index.html
+    notify: restartwebserver     
 
   - name: i want to download files from remote(internet) in to nodes side
     get_url:
@@ -28,3 +34,10 @@
     file:
       path: /home/ubuntu/myfolder
       state: directory
+  
+  handlers:
+   - name:
+     service:
+        name: apache2
+        state: restarted
+
