@@ -8,7 +8,12 @@
       name: apache2
       state: present
 
-  - name: i want to copy static files in to ansibel nodes side
+  - name: i want to copy static files in to ansible nodes side
     copy:
          src: mystaticfile.html
          dest: /var/www/html/index.html    
+
+  - name: i want to copy dynamic file in to ansible nodes side     
+    template:
+         src: myindex.j2
+         dest: /var/www/html/index.html  
