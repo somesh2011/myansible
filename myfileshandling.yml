@@ -28,6 +28,7 @@
       url: https://get.jenkins.io/war-stable/2.387.2/jenkins.war
       dest: /home/ubuntu/jenkins.war
       force_basic_auth: yes
+    notify: restartwebserver
       
   - name: i want to create a folder 
     file:
